@@ -1,8 +1,8 @@
-# ResearchBuddy
+# RRaccoon
 
 AI-Native Research Collaboration Ecosystem
 
-ResearchBuddy is a platform that uses intelligent AI matchmaking to connect students, researchers, and innovators based on shared goals, complementary skills, and execution style. Great ideas should never fail at the starting line due to lack of collaboration.
+RRaccoon is a platform that uses intelligent AI matchmaking to connect students, researchers, and innovators based on shared goals, complementary skills, and execution style. Our raccoon helps match you with the right research partner so great ideas can move from concept to collaboration.
 
 ---
 
@@ -24,7 +24,7 @@ ResearchBuddy is a platform that uses intelligent AI matchmaking to connect stud
 
 ## Overview
 
-Behind every successful innovation is collaboration. Yet millions of students, researchers, and innovators are stuck working in isolation. ResearchBuddy solves this by providing:
+Behind every successful innovation is collaboration. Yet millions of students, researchers, and innovators are stuck working in isolation. RRaccoon solves this by providing:
 
 - Intelligent AI matchmaking based on research intent and expertise
 - Dedicated collaboration workspaces

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchBuddy — AI-Native Research Collaboration Ecosystem</title>
+  <title>RRaccoon — AI-Native Research Collaboration Ecosystem</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet" />
@@ -55,6 +55,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
       padding: 1.1rem 5%;
       background: rgba(250, 249, 246, 0.88);
       backdrop-filter: blur(14px);
@@ -67,6 +68,7 @@
       font-weight: 700;
       color: var(--accent);
       letter-spacing: -0.5px;
+      flex-shrink: 0;
     }
 
     .nav-logo span {
@@ -75,8 +77,13 @@
 
     .nav-links {
       display: flex;
+      align-items: center;
+      justify-content: center;
       gap: 2rem;
       list-style: none;
+      flex: 1;
+      margin: 0 auto;
+      padding: 0;
     }
 
     .nav-links a {
@@ -85,6 +92,7 @@
       color: var(--ink-soft);
       text-decoration: none;
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -100,6 +108,7 @@
       font-weight: 500;
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
     }
 
     .nav-cta:hover {
@@ -121,6 +130,36 @@
         radial-gradient(circle at 10% 80%, rgba(201, 168, 76, 0.12) 0%, transparent 50%),
         var(--paper);
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.18;
+      z-index: 0;
+    }
+
+    .hero::before {
+      left: -60px;
+      top: 80px;
+      background: var(--gold);
+    }
+
+    .hero::after {
+      right: -40px;
+      bottom: 60px;
+      background: var(--accent-2);
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
 
     .hero-tag {
@@ -230,6 +269,12 @@
 
     .stat {
       text-align: center;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(14, 17, 23, 0.06);
+      border-radius: 18px;
+      padding: 1.1rem 1.5rem;
+      box-shadow: 0 12px 28px rgba(14, 17, 23, 0.04);
+      backdrop-filter: blur(8px);
     }
 
     .stat-num {
@@ -310,11 +355,11 @@
     }
 
     .step-card {
-      background: #fff;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,249,246,0.96));
       border-radius: var(--radius-md);
       border: 1px solid rgba(14, 17, 23, 0.07);
       padding: 2rem 1.8rem;
-      transition: transform 0.25s, box-shadow 0.25s;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       position: relative;
       overflow: hidden;
     }
@@ -333,8 +378,9 @@
     }
 
     .step-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(14, 17, 23, 0.10);
+      transform: translateY(-8px);
+      box-shadow: 0 18px 42px rgba(14, 17, 23, 0.10);
+      border-color: rgba(27, 79, 114, 0.14);
     }
 
     .step-icon {
@@ -696,7 +742,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">Research<span>Buddy</span></div>
+    <div class="nav-logo">RRaccoon</div>
     <ul class="nav-links">
       <li><a href="#problem">The Problem</a></li>
       <li><a href="#how">How it Works</a></li>
@@ -710,14 +756,14 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-tag">AI-Native Research Collaboration Ecosystem</div>
-    <h1>Stop Researching<br />in <em>Isolation</em></h1>
+    <h1>Let our Raccoon<br />find your research <em>Partner</em></h1>
     <p class="hero-sub">
-      ResearchBuddy uses intelligent AI matchmaking to connect students, researchers, and innovators
-      based on shared goals, complementary skills, and execution style — so great ideas never fail at the starting line.
+      RRaccoon uses intelligent AI matchmaking to connect students, researchers, and innovators based on shared goals,
+      complementary skills, and execution style — so your next breakthrough finds the right teammate.
     </p>
     <div class="hero-btns">
       <a href="#" class="btn-primary" onclick="openGetStarted(event)">Get Started →</a>
-      <a href="#" class="btn-ghost" onclick="openHowItWorks(event)">How ResearchBuddy Works</a>
+      <a href="#" class="btn-ghost" onclick="openHowItWorks(event)">How RRaccoon Works</a>
     </div>
     <div class="hero-stats">
       <div class="stat">
@@ -782,7 +828,7 @@
   <section id="how">
     <div style="max-width:1100px; margin:0 auto;">
       <p class="section-label">Simple Process</p>
-      <h2 class="section-title">How ResearchBuddy Works</h2>
+      <h2 class="section-title">How RRaccoon Works</h2>
       <p class="section-sub">From profile creation to full collaboration in four intelligent steps powered by AI.</p>
       <div class="how-grid">
         <div class="step-card" data-num="01">
@@ -800,7 +846,7 @@
         <div class="step-card" data-num="03">
           <div class="step-icon icon-teal">🔗</div>
           <h3>Precision-Matched Connections</h3>
-          <p>We go beyond keywords. If you're an AI engineer exploring climate modeling, ResearchBuddy analyzes your
+          <p>We go beyond keywords. If you're an AI engineer exploring climate modeling, RRaccoon analyzes your
             research intent to find the right environmental scientist — anywhere in the world.</p>
         </div>
         <div class="step-card" data-num="04">
@@ -900,7 +946,7 @@
       <p class="section-label">Target Audience</p>
       <h2 class="section-title">Built for Every Kind of Innovator</h2>
       <p class="section-sub" style="max-width:600px; margin:0.8rem auto 3.5rem;">Our target market is immediate and
-        global — wherever research happens, ResearchBuddy belongs.</p>
+        global — wherever research happens, RRaccoon belongs.</p>
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem;">
         <div
           style="background:#fff; border-radius:var(--radius-md); border:1px solid rgba(14,17,23,0.07); padding:2rem 1.5rem; text-align:center;">
@@ -943,7 +989,7 @@
     <p class="section-label">Join Today — It's Free</p>
     <h2 class="section-title">Let's Stop Researching in Isolation</h2>
     <p class="section-sub">
-      ResearchBuddy is not just another platform — it is the fundamental infrastructure for the future of collective
+      RRaccoon is not just another platform — it is the fundamental infrastructure for the future of collective
       human intelligence.
       Register now to find your match, access collaboration workspaces, and turn your research idea into a publication,
       innovation, or startup.
@@ -1029,7 +1075,7 @@
           <div class="gs-success">
             <div class="gs-success-icon">✓</div>
             <h3>You're on the waitlist!</h3>
-            <p>We'll notify you at <span id="gs-email-confirm"></span> when your profile is ready. ResearchBuddy
+            <p>We'll notify you at <span id="gs-email-confirm"></span> when your profile is ready. RRaccoon
               launches soon!</p>
             <button class="rb-btn-primary" onclick="closeModal('modal-get-started')">Back to Home</button>
           </div>
@@ -1054,7 +1100,7 @@
       <button class="rb-close" onclick="closeModal('modal-how')">✕</button>
       <div class="hw-header">
         <p class="section-label">Simple Process</p>
-        <h2 class="hw-title">How ResearchBuddy Works</h2>
+        <h2 class="hw-title">How RRaccoon Works</h2>
         <p class="hw-sub">From profile creation to full collaboration in four intelligent steps.</p>
       </div>
       <div class="hw-steps">
@@ -1083,7 +1129,7 @@
           <div class="hw-step-icon">🔗</div>
           <div class="hw-step-body">
             <h3>Precision-Matched Connections</h3>
-            <p>We go beyond keywords. If you're an AI engineer exploring climate modeling, ResearchBuddy analyzes your
+            <p>We go beyond keywords. If you're an AI engineer exploring climate modeling, RRaccoon analyzes your
               research intent to find the right environmental scientist — anywhere in the world.</p>
           </div>
         </div>
@@ -1622,7 +1668,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <strong>ResearchBuddy</strong> — AI-Native Research Collaboration Ecosystem &nbsp;·&nbsp;
+    <strong>RRaccoon</strong> — AI-Native Research Collaboration Ecosystem &nbsp;·&nbsp;
     © 2025 &nbsp;·&nbsp; Built for researchers, by researchers. &nbsp;·&nbsp; Accelerating interdisciplinary innovation
     worldwide.
   </footer>
